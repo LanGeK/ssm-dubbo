@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://code.alibabatech.com/schema/dubbo
+	http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <description>
+        存放Spring Dubbo相关配置
+    </description>
+
+    <!--&lt;!&ndash; 提供方应用信息，用于计算依赖关系 &ndash;&gt;-->
+    <!--<dubbo:application name="${dubbo.application.name}"  />-->
+
+    <!--&lt;!&ndash; 使用multicast广播注册中心暴露服务地址-->
+    <!--<dubbo:registry address="multicast://224.5.6.7:1234" />&ndash;&gt;-->
+
+    <!--<dubbo:registry id="zk1" address="${dubbo.registry.address}" protocol="${dubbo.registry.protocol}" check="false" subscribe="false" register=""/>-->
+    <!--<dubbo:registry id="zk1" address="${dubbo.registry.address}" protocol="${dubbo.registry.protocol}" />-->
+
+    <!--<dubbo:protocol id="mydubbo" name="${dubbo.protocol.name}" port="${dubbo.protocol.port}" host="127.0.0.1"/>-->
+
+    <!--<dubbo:provider registry="zk1" protocol="mydubbo"/>-->
+    <!-- 用dubbo协议在20880端口暴露服务 -->
+    <!--<dubbo:protocol name="dubbo" port="${dubbo.protocol.port}" />-->
+
+    <!--<dubbo:application name="${cubcweb.dubbo.application.name}" owner="${cubcweb.dubbo.application.owner}" />-->
+    <!--<dubbo:registry protocol="${cubcweb.dubbo.registry.protocol}" address="${cubcweb.dubbo.registry.address}"/>-->
+    <!--<dubbo:protocol name="${cubcweb.dubbo.protocol.name}" port="${cubcweb.dubbo.protocol.port}"/>-->
+    <!--<dubbo:consumer timeout="${cubcweb.dubbo.consumer.timeout}" check="${cubcweb.dubbo.consumer.check}"/>-->
+    <!--<dubbo:provider timeout="${cubcweb.dubbo.provider.timeout}"/>-->
+
+    <!--<dubbo:application name="beauty_ssm-master"></dubbo:application>-->
+    <!--<dubbo:registry address="zookeeper://127.0.0.1:2181" check="false" subscribe="false" register=""></dubbo:registry>-->
+    
+    <import resource="dubbo-provider.xml"/>
+    <import resource="dubbo-consumer.xml"/>
+
+</beans>

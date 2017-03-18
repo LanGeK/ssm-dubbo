@@ -1,0 +1,17 @@
+bin                                                                                                                                         
+.metadata
+*/bin
+*/.project
+*/.classpath
+*/target
+*/.settings
+*/logs
+target
+*/target
+.settings
+.project
+.DS_Store
+.classpath
+.idea/
+*.iml
+*/src/test/java/META-INF/MANIFEST.MF

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://code.alibabatech.com/schema/dubbo
+	http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+
+    <!-- 基础资料日志 -->
+    <dubbo:service
+            interface="com.yingjun.ssm.service.UserService"
+            ref="userService" version="1.0.0" group="wuxing" />
+    <!--操作服务  -->
+    <!--todo 2017-02-21 -->
+    <dubbo:service
+            interface="com.yingjun.ssm.service.GoodsService"
+            ref="goodsService" version="1.0.0" group="wuxing" />
+    <!--<dubbo:service-->
+            <!--interface="com.yingjun.ssm.service.DemoService"-->
+            <!--ref="demoService" version="1.0.0" group="${dubbo.dubbo_env}" />-->
+
+</beans>
